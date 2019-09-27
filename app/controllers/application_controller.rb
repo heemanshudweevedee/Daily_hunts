@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
   end
 
   def fetch_news
-    url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=#{ENV['NEWS_API_KEY']}"
+    url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=522dcc5247dc4f51ad23eb172f8d5808"
     response = HTTParty.get url
     @articles = response.parsed_response['articles'] unless response.code != 200
   end

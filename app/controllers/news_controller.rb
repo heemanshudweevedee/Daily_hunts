@@ -24,7 +24,7 @@ class NewsController < ApplicationController
   private
 
   def fetch_news_query query
-    url = "https://newsapi.org/v2/everything?q=#{query}&apiKey=#{ENV['NEWS_API_KEY']}&language=en"
+    url = "https://newsapi.org/v2/everything?q=#{query}&apiKey=522dcc5247dc4f51ad23eb172f8d5808&language=en"
     response = HTTParty.get url
     response.parsed_response['articles'] unless response.code != 200
   end
